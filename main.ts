@@ -12,7 +12,13 @@ let currenttemperature = input.temperature()
 max = currenttemperature
 min = currenttemperature
 basic.forever(function () {
-    basic.showString(".")
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
     currenttemperature = input.temperature()
     if (currenttemperature < min) {
         min = currenttemperature
